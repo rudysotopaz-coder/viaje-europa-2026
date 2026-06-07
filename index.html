@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viaje Familiar De León — Europa 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--gold:#C9A84C;--gold-l:#E8C96A;--navy:#0D1B2A;--navy2:#1A2F45;--cream:#F9F5EE;--cream2:#EFE9DC;--text:#2C2C2C;--muted:#7A7A7A;--green:#1B7A3E;--gbg:#E8F8EE;--orange:#B85C00;--obg:#FEF3E2;--red:#C0392B;--rbg:#FEE2E2;--blue:#2563EB;--bbg:#EEF4FF;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
+
+/* HERO */
+.hero{min-height:100vh;background:var(--navy);display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 25% 60%,rgba(201,168,76,.18) 0%,transparent 55%),radial-gradient(ellipse at 80% 20%,rgba(201,168,76,.10) 0%,transparent 50%);}
+.hc{position:relative;z-index:1;text-align:center;padding:2rem 1.5rem;}
+.eye{font-size:.7rem;letter-spacing:.35em;color:var(--gold);text-transform:uppercase;font-weight:600;margin-bottom:1.5rem;}
+.hc h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,9vw,7.5rem);font-weight:900;color:#fff;line-height:.9;margin-bottom:.75rem;}
+.hc h1 em{color:var(--gold);font-style:italic;display:block;}
+.sub{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1rem,2.5vw,1.5rem);color:rgba(255,255,255,.5);margin-bottom:2.5rem;}
+.flags{display:flex;gap:.65rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem;}
+.fb{background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3);color:var(--gold-l);padding:.45rem 1rem;border-radius:100px;font-size:.8rem;font-weight:500;}
+.hstats{display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;}
+.hs{text-align:center;}
+.hs .n{font-family:'Playfair Display',serif;font-size:2.3rem;font-weight:900;color:var(--gold);line-height:1;}
+.hs .l{font-size:.62rem;letter-spacing:.2em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-top:.2rem;}
+.sdiv{width:1px;background:rgba(201,168,76,.25);align-self:center;height:32px;}
+
+/* NAV */
+.nav{background:var(--navy);position:sticky;top:0;z-index:100;border-bottom:1px solid rgba(201,168,76,.2);box-shadow:0 4px 25px rgba(0,0,0,.35);}
+.nav-i{max-width:1200px;margin:0 auto;display:flex;align-items:center;padding:0 1.5rem;overflow-x:auto;}
+.nlogo{font-family:'Playfair Display',serif;color:var(--gold);font-size:.9rem;font-weight:700;padding:1rem 1.2rem 1rem 0;border-right:1px solid rgba(201,168,76,.2);margin-right:1rem;white-space:nowrap;}
+.tab{background:none;border:none;cursor:pointer;color:rgba(255,255,255,.45);font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:500;letter-spacing:.04em;padding:1.1rem .9rem;transition:color .2s;border-bottom:2px solid transparent;white-space:nowrap;}
+.tab:hover{color:rgba(255,255,255,.75);}
+.tab.on{color:var(--gold);border-bottom-color:var(--gold);}
+
+/* SECTIONS */
+.sec{display:none;}.sec.on{display:block;}
+.sh{background:var(--navy2);padding:3rem 1.5rem 2.5rem;text-align:center;border-bottom:1px solid rgba(201,168,76,.15);}
+.sh .e{font-size:.67rem;letter-spacing:.35em;color:var(--gold);text-transform:uppercase;font-weight:600;margin-bottom:.6rem;}
+.sh h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,5vw,3rem);color:#fff;font-weight:900;}
+.sh h2 em{color:var(--gold);font-style:italic;}
+.wrap{max-width:1200px;margin:0 auto;padding:2.5rem 1.5rem;}
+
+/* TAGS */
+.tag{display:inline-block;padding:.18rem .6rem;border-radius:100px;font-size:.67rem;font-weight:700;letter-spacing:.04em;}
+.tok{background:var(--gbg);color:var(--green);}
+.twarn{background:var(--obg);color:var(--orange);}
+.tpend{background:var(--rbg);color:var(--red);}
+.tblue{background:var(--bbg);color:var(--blue);}
+.tgold{background:rgba(201,168,76,.15);color:#8a6400;}
+
+/* TABLE */
+.tw{overflow-x:auto;border-radius:14px;box-shadow:0 3px 20px rgba(0,0,0,.09);margin-bottom:2rem;}
+table{width:100%;border-collapse:collapse;background:#fff;min-width:500px;}
+thead{background:var(--navy);}
+thead th{color:var(--gold);font-size:.67rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;padding:.85rem 1.1rem;text-align:left;}
+tbody tr{border-bottom:1px solid var(--cream2);transition:background .15s;}
+tbody tr:hover{background:var(--cream);}
+tbody tr:last-child{border-bottom:none;}
+td{padding:.8rem 1.1rem;font-size:.85rem;vertical-align:middle;}
+td.lc{font-weight:600;color:var(--navy);}
+.trt{background:var(--navy)!important;}
+.trt td{color:#fff!important;font-weight:700;font-size:.9rem;border:none!important;}
+.trt td.amt{color:var(--gold)!important;font-size:1.05rem;}
+.trg{background:var(--gbg)!important;}.trg td{color:var(--green)!important;font-weight:700;}
+.trb{background:var(--bbg)!important;}.trb td{color:var(--blue)!important;font-weight:600;}
+
+.st{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--navy);margin:2.5rem 0 1rem;padding-bottom:.4rem;border-bottom:2px solid var(--gold);font-weight:700;}
+
+/* SUMMARY CARDS */
+.sg{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem;margin:0 0 2.5rem;}
+.sc{background:var(--navy);border-radius:16px;padding:1.4rem;text-align:center;}
+.sc .i{font-size:1.7rem;margin-bottom:.4rem;}
+.sc .l{font-size:.62rem;letter-spacing:.2em;color:rgba(255,255,255,.45);text-transform:uppercase;margin-bottom:.2rem;}
+.sc .v{font-family:'Playfair Display',serif;font-size:1.65rem;color:var(--gold);font-weight:900;}
+.sc .s{font-size:.7rem;color:rgba(255,255,255,.35);margin-top:.15rem;}
+
+/* ALERT */
+.alert{border-radius:12px;padding:1rem 1.3rem;margin:1.5rem 0;border-left:4px solid;}
+.aw{background:var(--obg);border-color:var(--orange);}.aw h4{color:var(--orange);}
+.aw p,.aw li{color:#7A4A00;font-size:.82rem;line-height:1.6;}
+.ag{background:var(--gbg);border-color:var(--green);}.ag h4{color:var(--green);}
+.ag p,.ag li{color:#1B5E20;font-size:.82rem;line-height:1.6;}
+.alert h4{font-size:.83rem;font-weight:700;margin-bottom:.3rem;}
+.alert ul{margin-left:1rem;}
+
+/* PAX */
+.pg{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:.85rem;margin-bottom:2rem;}
+.pc{background:#fff;border-radius:12px;padding:.85rem 1.1rem;border-left:3px solid var(--gold);display:flex;align-items:center;gap:.7rem;box-shadow:0 2px 8px rgba(0,0,0,.06);}
+.pn{width:29px;height:29px;border-radius:50%;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;flex-shrink:0;}
+.pname{font-weight:600;font-size:.87rem;color:var(--navy);}
+.ptk{font-size:.67rem;color:var(--muted);}
+
+/* ============ ITINERARY ============ */
+.day-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 4px 25px rgba(0,0,0,.1);margin-bottom:1.5rem;}
+.day-card.today{border:2px solid var(--gold);box-shadow:0 4px 30px rgba(201,168,76,.25);}
+.day-header{display:grid;grid-template-columns:1fr 1fr;min-height:240px;}
+@media(max-width:640px){.day-header{grid-template-columns:1fr;}}
+.day-img{background-size:cover;background-position:center;}
+.day-info{background:var(--navy);padding:1.8rem 2rem;display:flex;flex-direction:column;justify-content:center;}
+.today-badge{display:inline-block;background:var(--gold);color:var(--navy);font-size:.65rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .7rem;border-radius:100px;margin-bottom:.6rem;}
+.day-pill{display:inline-block;background:rgba(201,168,76,.2);border:1px solid rgba(201,168,76,.35);color:var(--gold);font-size:.65rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.2rem .7rem;border-radius:100px;margin-bottom:.6rem;}
+.day-info h3{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:900;color:#fff;line-height:1.05;margin-bottom:.4rem;}
+.day-info .city{font-size:.82rem;color:rgba(255,255,255,.55);margin-bottom:.9rem;}
+.dpills{display:flex;flex-wrap:wrap;gap:.35rem;}
+.dp{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.7);font-size:.68rem;padding:.22rem .6rem;border-radius:100px;}
+.dp.star{background:rgba(201,168,76,.18);border-color:rgba(201,168,76,.3);color:var(--gold-l);}
+
+/* LOG BAR */
+.lb{background:var(--cream);padding:.9rem 1.5rem;display:flex;gap:1.5rem;flex-wrap:wrap;border-bottom:1px solid var(--cream2);}
+.li .ll{font-size:.6rem;color:var(--muted);letter-spacing:.13em;text-transform:uppercase;}
+.li .lv{font-size:.84rem;font-weight:600;color:var(--navy);}
+
+/* MAP LINK */
+.map-link{color:inherit;text-decoration:none;cursor:pointer;border-bottom:1px dashed var(--gold);transition:color .2s;}
+.map-link:hover{color:var(--gold);}
+
+/* ACTIVITIES */
+.acts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1rem;padding:1.2rem;}
+.act{background:var(--cream);border-radius:14px;overflow:hidden;transition:transform .2s,box-shadow .2s;}
+.act:hover{transform:translateY(-3px);box-shadow:0 8px 25px rgba(0,0,0,.12);}
+.act.star{background:#fff;border:1.5px solid var(--gold);}
+.act-img{height:160px;background-size:cover;background-position:center;position:relative;}
+.act-sb{position:absolute;top:8px;left:8px;background:var(--gold);color:var(--navy);font-size:.6rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:.2rem .6rem;border-radius:100px;}
+.ab{padding:1.1rem;}
+.ab h4{font-family:'Playfair Display',serif;font-size:1rem;color:var(--navy);margin-bottom:.55rem;line-height:1.2;}
+.ab ul{list-style:none;display:flex;flex-direction:column;gap:.35rem;margin-bottom:.75rem;}
+.ab ul li{display:flex;gap:.5rem;align-items:flex-start;font-size:.79rem;color:#444;line-height:1.5;}
+.ab ul li::before{content:'›';color:var(--gold);font-size:.95rem;font-weight:700;flex-shrink:0;}
+.atags{display:flex;flex-wrap:wrap;gap:.35rem;}
+
+/* MAPS TAB */
+.map-day{margin-bottom:2rem;}
+.map-day h3{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--navy);margin-bottom:.75rem;padding-bottom:.4rem;border-left:3px solid var(--gold);padding-left:.75rem;}
+.map-links-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.75rem;}
+.map-btn{display:flex;align-items:center;gap:.75rem;background:#fff;border-radius:12px;padding:1rem 1.2rem;text-decoration:none;box-shadow:0 2px 10px rgba(0,0,0,.08);transition:transform .2s,box-shadow .2s;border:1px solid var(--cream2);}
+.map-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.13);border-color:var(--gold);}
+.map-btn .ico{font-size:1.5rem;flex-shrink:0;}
+.map-btn .txt .name{font-weight:600;font-size:.88rem;color:var(--navy);}
+.map-btn .txt .detail{font-size:.73rem;color:var(--muted);margin-top:.1rem;}
+.map-btn .arr{margin-left:auto;color:var(--gold);font-size:1rem;}
+.today-map-note{background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.3);border-radius:10px;padding:.75rem 1rem;margin-bottom:1.5rem;font-size:.82rem;color:#7a5a00;font-weight:500;}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+footer{background:var(--navy);color:rgba(255,255,255,.4);text-align:center;padding:1.8rem;font-size:.73rem;border-top:1px solid rgba(201,168,76,.15);}
+footer span{color:var(--gold);}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+<div class="hc">
+  <p class="eye">✦ Viaje Familiar ✦ 7 Pasajeros ✦ 5 Países ✦ Europa 2026 ✦</p>
+  <h1>Familia<em>De León</em></h1>
+  <p class="sub">Bogotá · Madrid · Barcelona · París · Atenas · Roma</p>
+  <div class="flags">
+    <span class="fb">🇨🇴 Colombia</span><span class="fb">🇪🇸 España</span>
+    <span class="fb">🇫🇷 Francia</span><span class="fb">🇬🇷 Grecia</span><span class="fb">🇮🇹 Italia</span>
+  </div>
+  <div class="hstats">
+    <div class="hs"><div class="n">7</div><div class="l">Pasajeros</div></div>
+    <div class="sdiv"></div>
+    <div class="hs"><div class="n">5</div><div class="l">Países</div></div>
+    <div class="sdiv"></div>
+    <div class="hs"><div class="n">10</div><div class="l">Noches</div></div>
+    <div class="sdiv"></div>
+    <div class="hs"><div class="n">12</div><div class="l">Días</div></div>
+    <div class="sdiv"></div>
+    <div class="hs"><div class="n">28<span style="font-size:1.1rem"> Oct</span></div><div class="l">Salida GUA</div></div>
+  </div>
+</div>
+</section>
+
+<!-- NAV -->
+<nav class="nav">
+<div class="nav-i">
+  <div class="nlogo">✦ De León 2026</div>
+  <button class="tab on" onclick="go('itin',this)">🗺 Itinerario</button>
+  <button class="tab" onclick="go('maps',this)">📍 Mapas & Navegación</button>
+  <button class="tab" onclick="go('costs',this)">💰 Costos</button>
+  <button class="tab" onclick="go('pax',this)">👥 Pasajeros</button>
+  <button class="tab" onclick="go('codes',this)">📋 Reservas</button>
+</div>
+</nav>
+
+<!-- ================================================================
+     ITINERARIO
+================================================================ -->
+<section id="itin" class="sec on">
+<div class="sh"><p class="e">✦ 28 Oct — 9 Nov 2026 · Ordenado por fecha</p><h2>Itinerario <em>Día a Día</em></h2></div>
+<div class="wrap" id="itin-wrap">
+
+<!-- ===== DÍA 1: 28 OCT — SALIDA ===== -->
+<div class="day-card" data-date="2026-10-28" id="day-20261028">
+  <div class="day-header">
+    <div class="day-img" style="background-image:url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&q=80')"></div>
+    <div class="day-info">
+      <div class="day-pill">Día 1 · Miércoles 28 Oct</div>
+      <h3>✈️ Salida hacia Europa</h3>
+      <p class="city">Guatemala City → Bogotá (escala) → Madrid</p>
+      <div class="dpills">
+        <span class="dp">AV743 · 09:30 GUA</span>
+        <span class="dp">Escala BOG · 3h 45min</span>
+        <span class="dp">AV182 · 17:25 BOG</span>
+        <span class="dp">✅ Maleta 10 kg incluida</span>
+      </div>
+    </div>
+  </div>
+  <div class="lb">
+    <div class="li"><div class="ll">Salida GUA</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Aeropuerto+Internacional+La+Aurora+Guatemala" target="_blank">Aeropuerto La Aurora</a> · 09:30</div></div>
+    <div class="li"><div class="ll">Escala</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Aeropuerto+El+Dorado+Bogota+Colombia" target="_blank">El Dorado BOG</a> · 13:40–17:25</div></div>
+    <div class="li"><div class="ll">Llegada Madrid</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Aeropuerto+Adolfo+Suarez+Madrid+Barajas" target="_blank">MAD T4S</a> · 29 Oct 08:50</div></div>
+    <div class="li"><div class="ll">Booking Avianca</div><div class="lv">BUKRK3</div></div>
+  </div>
+  <div class="acts-grid">
+    <div class="act"><div class="ab"><h4>🛫 Mañana: Aeropuerto La Aurora</h4>
+      <ul><li>Presentarse 3 horas antes: 06:30 AM</li><li>Vuelo AV743 sale 09:30 — operado por Aviateca</li><li>Maleta de 10 kg incluida en tarifa LIGHT</li><li>Llegada Bogotá 13:40</li></ul>
+      <div class="atags"><span class="tag twarn">Llegar 06:30</span></div></div></div>
+    <div class="act"><div class="ab"><h4>🇨🇴 Escala Bogotá — Solo aeropuerto</h4>
+      <ul><li>3h 45min de escala — sin salir del aeropuerto</li><li>Tránsito en Terminal 1 El Dorado</li><li>Juan Valdez o Crepes & Waffles para comer</li><li>Cargar dispositivos y descansar</li><li>AV182 sale 17:25 hacia Madrid</li></ul>
+      <div class="atags"><span class="tag tblue">Sin salir del aeropuerto</span></div></div></div>
+    <div class="act"><div class="ab"><h4>🌙 Vuelo nocturno a Madrid</h4>
+      <ul><li>AV182 · BOG 17:25 → MAD 08:50+1 · 9h 25min</li><li>Dormir en el avión — llegan de madrugada hora local</li><li>Madrid Terminal 4S</li><li>Intentar descansar bien para el primer día en Europa</li></ul>
+      <div class="atags"><span class="tag tok">9h 25min</span></div></div></div>
+  </div>
+</div>
+
+<!-- ===== DÍA 2: 29 OCT — MADRID ===== -->
+<div class="day-card" data-date="2026-10-29" id="day-20261029">
+  <div class="day-header">
+    <div class="day-img" style="background-image:url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&q=80')"></div>
+    <div class="day-info">
+      <div class="day-pill">Día 2 · Jueves 29 Oct</div>
+      <h3>🇪🇸 Madrid</h3>
+      <p class="city">Llegada · Gran Vía · Museo del Prado</p>
+      <div class="dpills">
+        <span class="dp star">⭐ Museo del Prado</span>
+        <span class="dp">Gran Vía</span>
+        <span class="dp">Plaza Mayor</span>
+        <span class="dp">Hotel: Gran Via 63</span>
+      </div>
+    </div>
+  </div>
+  <div class="lb">
+    <div class="li"><div class="ll">Llegada</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Aeropuerto+Adolfo+Suarez+Madrid+Barajas" target="_blank">MAD T4S</a> · 08:50</div></div>
+    <div class="li"><div class="ll">Hotel</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Gran+Via+63+Hotel+Madrid" target="_blank">Gran Via 63 Rooms</a> · Check-in 15:00 · Conf. 6034420256</div></div>
+    <div class="li"><div class="ll">Check-out</div><div class="lv">30 Oct · 11:00</div></div>
+  </div>
+  <div class="acts-grid">
+    <div class="act"><div class="ab"><h4>🌅 Mañana: Llegada y descanso</h4>
+      <ul><li>Llegada 08:50 en MAD T4S · Metro o taxi al hotel</li><li>Dejar maletas en consigna (check-in a las 15:00)</li><li>Desayuno español: churros con chocolate en la Gran Vía</li><li>Paseo ligero por <a class="map-link" href="https://maps.google.com/?q=Gran+Via+Madrid" target="_blank">Gran Vía</a> y <a class="map-link" href="https://maps.google.com/?q=Plaza+Mayor+Madrid" target="_blank">Plaza Mayor</a></li></ul>
+      <div class="atags"><span class="tag tok">Flexible</span></div></div></div>
+    <div class="act star">
+      <div class="act-img" style="background-image:url('https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&q=80')"><span class="act-sb">⭐ Imperdible</span></div>
+      <div class="ab"><h4><a class="map-link" href="https://maps.google.com/?q=Museo+del+Prado+Madrid" target="_blank">Museo del Prado</a></h4>
+      <ul><li>Uno de los 3 mejores museos de arte del mundo</li><li>Las Meninas de Velázquez · Los Fusilamientos de Goya</li><li>Entrada gratuita de 18:00 a 20:00 — ¡aprovechar!</li><li>Reservar en museodelprado.es</li></ul>
+      <div class="atags"><span class="tag tok">18:00–20:00 gratis</span><span class="tag tgold">~2h</span></div></div></div>
+    <div class="act"><div class="ab"><h4>🌃 Tarde-Noche Madrid</h4>
+      <ul><li>Check-in hotel 15:00 · Ducharse y descansar</li><li>Cena en <a class="map-link" href="https://maps.google.com/?q=Mercado+San+Miguel+Madrid" target="_blank">Mercado de San Miguel</a> o Malasaña</li><li>Paseo nocturno por <a class="map-link" href="https://maps.google.com/?q=Puerta+del+Sol+Madrid" target="_blank">Puerta del Sol</a></li></ul>
+      <div class="atags"><span class="tag tok">Noche</span></div></div></div>
+  </div>
+</div>
+
+<!-- ===== DÍA 3: 30 OCT — MADRID → BARCELONA ===== -->
+<div class="day-card" data-date="2026-10-30" id="day-20261030">
+  <div class="day-header">
+    <div class="day-img" style="background-image:url('https://images.unsplash.com/photo-1564221710304-0b37c8b9d729?w=800&q=80')"></div>
+    <div class="day-info">
+      <div class="day-pill">Día 3 · Viernes 30 Oct</div>
+      <h3>🇪🇸 Madrid → Barcelona</h3>
+      <p class="city">Mañana libre en Madrid · Tren OUIGO nocturno</p>
+      <div class="dpills">
+        <span class="dp"><a class="map-link" href="https://maps.google.com/?q=Parque+del+Retiro+Madrid" target="_blank" style="color:inherit">Parque del Retiro</a></span>
+        <span class="dp">🚄 OUIGO 20:10</span>
+        <span class="dp">Reserva MKMP72</span>
+      </div>
+    </div>
+  </div>
+  <div class="lb">
+    <div class="li"><div class="ll">Check-out hotel</div><div class="lv">11:00 · <a class="map-link" href="https://maps.google.com/?q=Gran+Via+63+Hotel+Madrid" target="_blank">Gran Via 63</a></div></div>
+    <div class="li"><div class="ll">Tren</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Estacion+Madrid+Atocha+Almudena+Grandes" target="_blank">Madrid Atocha</a> · Salida 20:10 · MKMP72 · Coche 16</div></div>
+    <div class="li"><div class="ll">Llegada</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Estacion+Barcelona+Sants" target="_blank">Barcelona Sants</a> · 23:28</div></div>
+    <div class="li"><div class="ll">Hotel BCN</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Leonardo+Boutique+Hotel+Barcelona+Sagrada+Familia" target="_blank">Leonardo Boutique SGF</a> · Conf. 5112312061</div></div>
+  </div>
+  <div class="acts-grid">
+    <div class="act"><div class="ab"><h4>🌿 Mañana libre · <a class="map-link" href="https://maps.google.com/?q=Parque+del+Retiro+Madrid" target="_blank">Parque del Retiro</a></h4>
+      <ul><li>El pulmón verde de Madrid — 125 hectáreas</li><li>Paseo en barca por el Estanque Grande</li><li>Palacio de Cristal: estructura de hierro y vidrio espectacular</li><li>Almuerzo en los alrededores del Retiro</li></ul>
+      <div class="atags"><span class="tag tok">Mañana</span></div></div></div>
+    <div class="act"><div class="ab"><h4>🏛 Barrio de las Letras (cerca Prado)</h4>
+      <ul><li>A 5 min del Museo del Prado a pie</li><li>Calles adoquinadas con citas literarias en el suelo</li><li>Tabernas y bares típicos del siglo XVII</li><li>Real Academia de Bellas Artes de San Fernando</li></ul>
+      <div class="atags"><span class="tag tok">Mediodía</span></div></div></div>
+    <div class="act"><div class="ab"><h4>🚄 Tarde: <a class="map-link" href="https://maps.google.com/?q=Estacion+Madrid+Atocha+Almudena+Grandes" target="_blank">Tren OUIGO a Barcelona</a></h4>
+      <ul><li>Llegar a Atocha-Almudena Grandes a las 19:30</li><li>Tren 07415 sale 20:10 · Coche 16 · 7 pasajeros</li><li>Llevar snacks para el viaje (3h 18min)</li><li>Llegada Barcelona Sants 23:28</li><li>Taxi al hotel Leonardo Boutique</li></ul>
+      <div class="atags"><span class="tag tpend">Llegar Atocha 19:30</span></div></div></div>
+  </div>
+</div>
+
+<!-- ===== DÍA 4: 31 OCT — BARCELONA → PARIS ===== -->
+<div class="day-card" data-date="2026-10-31" id="day-20261031">
+  <div class="day-header">
+    <div class="day-img" style="background-image:url('https://images.unsplash.com/photo-1583422409516-2895a77efded?w=800&q=80')"></div>
+    <div class="day-info">
+      <div class="day-pill">Día 4 · Sábado 31 Oct · 🎃 Halloween</div>
+      <h3>🇪🇸 Barcelona → 🇫🇷 París</h3>
+      <p class="city">Sagrada Família · Ramblas · Vuelo a París</p>
+      <div class="dpills">
+        <span class="dp star">⭐ Sagrada Família</span>
+        <span class="dp">Las Ramblas</span>
+        <span class="dp">✈️ TO4757 · 19:25</span>
+      </div>
+    </div>
+  </div>
+  <div class="lb">
+    <div class="li"><div class="ll">Check-out</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Leonardo+Boutique+Hotel+Barcelona+Sagrada+Familia" target="_blank">Leonardo Boutique</a> · Acordar hora</div></div>
+    <div class="li"><div class="ll">Vuelo</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Aeropuerto+El+Prat+Barcelona" target="_blank">BCN El Prat</a> · TO4757 · 19:25 · R8L16Y</div></div>
+    <div class="li"><div class="ll">Llegada París</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Aeropuerto+Paris+Orly" target="_blank">París Orly</a> · 21:25</div></div>
+    <div class="li"><div class="ll">Hotel PAR</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Home+Latin+Hotel+Paris" target="_blank">Home Latin</a> · Conf. 5451500041 · PIN 7530</div></div>
+  </div>
+  <div class="acts-grid">
+    <div class="act star">
+      <div class="act-img" style="background-image:url('https://images.unsplash.com/photo-1583422409516-2895a77efded?w=800&q=80')"><span class="act-sb">⭐ No negociable</span></div>
+      <div class="ab"><h4><a class="map-link" href="https://maps.google.com/?q=Sagrada+Familia+Barcelona" target="_blank">Sagrada Família</a> · 9:00 AM</h4>
+      <ul><li>Obra maestra de Gaudí — 141 años en construcción</li><li>Interior: columnas como bosque de piedra, vitrales imposibles</li><li>Subir a una torre para vista panorámica de Barcelona</li><li>🚨 Reservar YA en sagradafamilia.org</li></ul>
+      <div class="atags"><span class="tag tpend">Reservar urgente</span><span class="tag tok">~2h</span></div></div></div>
+    <div class="act"><div class="ab"><h4>🛒 <a class="map-link" href="https://maps.google.com/?q=Mercado+de+la+Boqueria+Barcelona" target="_blank">Boquería</a> + <a class="map-link" href="https://maps.google.com/?q=Las+Ramblas+Barcelona" target="_blank">Las Ramblas</a></h4>
+      <ul><li>Mercado de La Boquería: frutas, jamón ibérico, mariscos</li><li>Las Ramblas: el bulevar más famoso de España · 1.2 km</li><li>Barrio Gótico: callejuelas medievales y Catedral de Barcelona</li><li>Tapas de mediodía en el Born</li></ul>
+      <div class="atags"><span class="tag tok">Mediodía</span></div></div></div>
+    <div class="act"><div class="ab"><h4>✈️ Tarde: Vuelo a <a class="map-link" href="https://maps.google.com/?q=Aeropuerto+El+Prat+Barcelona" target="_blank">París</a></h4>
+      <ul><li>Salir del hotel a las 16:30 hacia El Prat (BCN)</li><li>Metro L9 Sur desde Sagrada Família · ~30 min</li><li>TO4757 sale 19:25 · Llegar aeropuerto 17:00</li><li>Llegada Orly 21:25 · Orlybus al hotel · ~30 min</li></ul>
+      <div class="atags"><span class="tag tpend">Salir hotel 16:30</span></div></div></div>
+  </div>
+</div>
+
+<!-- ===== DÍA 5: 1 NOV — DISNEYLAND ===== -->
+<div class="day-card" data-date="2026-11-01" id="day-20261101">
+  <div class="day-header">
+    <div class="day-img" style="background-image:url('https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=800&q=80')"></div>
+    <div class="day-info">
+      <div class="day-pill">Día 5 · Domingo 1 Nov · ⭐ DÍA ESPECIAL</div>
+      <h3>🏰 Disneyland París</h3>
+      <p class="city">Todo el día · La experiencia más mágica del viaje</p>
+      <div class="dpills">
+        <span class="dp star">⭐ Día completo en Disney</span>
+        <span class="dp">10:00 – 22:00</span>
+        <span class="dp">Hotel: Home Latin, París</span>
+      </div>
+    </div>
+  </div>
+  <div class="lb">
+    <div class="li"><div class="ll">Hotel</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Home+Latin+Hotel+Paris" target="_blank">Home Latin París</a> · Salir 08:30</div></div>
+    <div class="li"><div class="ll">Transporte</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Disneyland+Paris+Marne-la-Vallee" target="_blank">Disneyland París</a> · RER A desde Gare du Nord · ~40 min · €10 ida/vuelta</div></div>
+    <div class="li"><div class="ll">Horario Disney</div><div class="lv">10:00 – 22:00 · Espectáculo nocturno con fuegos 21:30</div></div>
+  </div>
+  <div class="acts-grid">
+    <div class="act star">
+      <div class="act-img" style="background-image:url('https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?w=800&q=80')"><span class="act-sb">⭐ El día más mágico</span></div>
+      <div class="ab"><h4><a class="map-link" href="https://maps.google.com/?q=Disneyland+Paris" target="_blank">Disneyland París</a> — Día Completo</h4>
+      <ul><li>Castillo de la Bella Durmiente: la foto familiar imprescindible</li><li>Big Thunder Mountain: montaña rusa para toda la familia</li><li>Fantasyland: ideal para los más pequeños</li><li>Tomorrowland + Hyperspace Mountain</li><li>Meet & Greet con personajes Disney a lo largo del día</li><li>Espectáculo "Disney Dreams" con fuegos 21:30</li><li>Comprar tickets + FastPass en disneylandparis.com</li></ul>
+      <div class="atags"><span class="tag tpend">Comprar tickets online</span><span class="tag tok">Todo el día</span></div></div></div>
+    <div class="act"><div class="ab"><h4>🚂 Cómo llegar al parque</h4>
+      <ul><li>RER A desde Gare du Nord o Châtelet-Les Halles</li><li>Estación final: Marne-la-Vallée/Chessy</li><li>~40 minutos desde el centro de París</li><li>El tren sale cada 15-20 minutos</li><li>Tarjeta Navigo o ticket individual ~€5 por persona</li></ul>
+      <div class="atags"><span class="tag tblue">RER A · 40 min</span></div></div></div>
+    <div class="act"><div class="ab"><h4>🍔 Comida en Disney</h4>
+      <ul><li>La comida dentro es cara — llevar snacks y agua</li><li>Restaurante Blue Lagoon: ambiente pirata, reservar</li><li>Lucky Luke's Rustler Roundup BBQ: buen precio</li><li>Regresar al hotel ~22:30 tras el espectáculo</li></ul>
+      <div class="atags"><span class="tag twarn">Llevar snacks</span></div></div></div>
+  </div>
+</div>
+
+<!-- ===== DÍA 6: 2 NOV — PARIS ===== -->
+<div class="day-card" data-date="2026-11-02" id="day-20261102">
+  <div class="day-header">
+    <div class="day-img" style="background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80')"></div>
+    <div class="day-info">
+      <div class="day-pill">Día 6 · Lunes 2 Nov</div>
+      <h3>🇫🇷 París — Arte & Monumentos</h3>
+      <p class="city">Montmartre · Louvre · Torre Eiffel</p>
+      <div class="dpills">
+        <span class="dp star">⭐ Louvre · Mona Lisa</span>
+        <span class="dp star">⭐ Torre Eiffel</span>
+        <span class="dp">Montmartre</span>
+        <span class="dp">Champs-Élysées</span>
+      </div>
+    </div>
+  </div>
+  <div class="lb">
+    <div class="li"><div class="ll">Hotel</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Home+Latin+Hotel+Paris" target="_blank">Home Latin París</a> · Conf. 5451500041</div></div>
+    <div class="li"><div class="ll">Ruta del día</div><div class="lv">Montmartre → Louvre → Torre Eiffel → Champs-Élysées</div></div>
+  </div>
+  <div class="acts-grid">
+    <div class="act"><div class="act-img" style="background-image:url('https://images.unsplash.com/photo-1550340499-a6c60fc8287c?w=800&q=80')"></div>
+      <div class="ab"><h4>🎨 Mañana: <a class="map-link" href="https://maps.google.com/?q=Sacre+Coeur+Montmartre+Paris" target="_blank">Montmartre</a></h4>
+      <ul><li>Barrio bohemio más pintoresco de París</li><li>Basílica del Sacré-Cœur: vista panorámica de toda la ciudad</li><li>Place du Tertre: artistas pintando al aire libre</li><li>Desayuno en una terraza del barrio</li></ul>
+      <div class="atags"><span class="tag tok">08:30 – 11:00</span></div></div></div>
+    <div class="act star">
+      <div class="act-img" style="background-image:url('https://images.unsplash.com/photo-1565799585994-e4e1f7a1ff64?w=800&q=80')"><span class="act-sb">⭐ Imperdible</span></div>
+      <div class="ab"><h4><a class="map-link" href="https://maps.google.com/?q=Museo+del+Louvre+Paris" target="_blank">Museo del Louvre</a> · Mona Lisa</h4>
+      <ul><li>El museo más visitado del mundo — 9 millones de visitantes/año</li><li>La Mona Lisa (La Gioconda) de Leonardo da Vinci · Sala 711</li><li>La Victoria de Samotracia · La Venus de Milo</li><li>La pirámide de cristal: foto obligatoria desde afuera</li><li>🚨 Reservar en louvre.fr — evitar 2-3h de fila</li></ul>
+      <div class="atags"><span class="tag tpend">Reservar louvre.fr</span><span class="tag tok">11:30–15:00</span></div></div></div>
+    <div class="act star">
+      <div class="act-img" style="background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80')"><span class="act-sb">⭐ Icónica</span></div>
+      <div class="ab"><h4><a class="map-link" href="https://maps.google.com/?q=Torre+Eiffel+Paris" target="_blank">Torre Eiffel</a> al atardecer</h4>
+      <ul><li>Desde el Champ de Mars: foto familiar perfecta</li><li>Atardecer desde el Trocadéro — vista frontal espectacular</li><li>De noche se ilumina cada hora con miles de luces</li><li>Subir: reservar en toureiffel.paris</li></ul>
+      <div class="atags"><span class="tag tok">16:00–20:00</span><span class="tag tblue">Ver de noche</span></div></div></div>
+  </div>
+</div>
+
+<!-- ===== DÍA 7: 3 NOV — PARIS → ATENAS ===== -->
+<div class="day-card" data-date="2026-11-03" id="day-20261103">
+  <div class="day-header">
+    <div class="day-img" style="background-image:url('https://images.unsplash.com/photo-1555993539-1732b0258235?w=800&q=80')"></div>
+    <div class="day-info">
+      <div class="day-pill">Día 7 · Martes 3 Nov</div>
+      <h3>🇫🇷 París → 🇬🇷 Atenas</h3>
+      <p class="city">Vuelo madrugada · Barrio Plaka por la tarde</p>
+      <div class="dpills">
+        <span class="dp">TO3520 · 09:35 ORY</span>
+        <span class="dp">Asientos 6A-6F y 7A</span>
+        <span class="dp star">⭐ Barrio Plaka</span>
+      </div>
+    </div>
+  </div>
+  <div class="lb">
+    <div class="li"><div class="ll">Check-out</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Home+Latin+Hotel+Paris" target="_blank">Home Latin</a> · Salir 06:00</div></div>
+    <div class="li"><div class="ll">Vuelo</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Aeropuerto+Paris+Orly" target="_blank">Orly ORY</a> · TO3520 · 09:35 · GFLNPD</div></div>
+    <div class="li"><div class="ll">Llegada</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Aeropuerto+Atenas+Eleftherios+Venizelos" target="_blank">Atenas ATH</a> · 13:50</div></div>
+    <div class="li"><div class="ll">Hotel ATH</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Omiros+Hotel+Athens+Greece" target="_blank">Omiros Hotel</a> · Conf. 5112331414 · PIN 7486</div></div>
+  </div>
+  <div class="acts-grid">
+    <div class="act"><div class="ab"><h4>⏰ Madrugada: Salida a Orly</h4>
+      <ul><li>Despertar 05:30 · Salir hotel 06:00</li><li>Orlybus desde Denfert-Rochereau ~30 min</li><li>Llegar aeropuerto Orly 07:30 · Terminal Orly 4</li><li>Vuelo TO3520 · GFLNPD · Sale 09:35</li></ul>
+      <div class="atags"><span class="tag tpend">Despertador 05:30</span></div></div></div>
+    <div class="act"><div class="ab"><h4>🏛 Tarde: <a class="map-link" href="https://maps.google.com/?q=Plaka+Athens+Greece" target="_blank">Barrio Plaka</a></h4>
+      <ul><li>Llegada Atenas 13:50 · Check-in Omiros Hotel</li><li>Plaka: el barrio más antiguo de Atenas, al pie de la Acrópolis</li><li>Calles empedradas con tiendas de artesanía griega</li><li>Ver la Acrópolis iluminada desde abajo al caer la noche</li></ul>
+      <div class="atags"><span class="tag tok">Tarde relajada</span></div></div></div>
+    <div class="act"><div class="ab"><h4>🍽 Cena griega en Plaka</h4>
+      <ul><li>Mezze: hummus, tzatziki, taramosalata, falafel</li><li>Souvlaki: brochetas de carne con pita y tzatziki</li><li>Spanakopita: hojaldre relleno de espinaca y feta</li><li>Vino griego Assyrtiko o Agiorgitiko</li></ul>
+      <div class="atags"><span class="tag tok">Noche</span></div></div></div>
+  </div>
+</div>
+
+<!-- ===== DÍA 8: 4 NOV — ATENAS ===== -->
+<div class="day-card" data-date="2026-11-04" id="day-20261104">
+  <div class="day-header">
+    <div class="day-img" style="background-image:url('https://images.unsplash.com/photo-1603565816030-6987515cc1d8?w=800&q=80')"></div>
+    <div class="day-info">
+      <div class="day-pill">Día 8 · Miércoles 4 Nov</div>
+      <h3>🇬🇷 Atenas — Historia Milenaria</h3>
+      <p class="city">Acrópolis · Museo Arqueológico · Monte Licabeto</p>
+      <div class="dpills">
+        <span class="dp star">⭐ Acrópolis & Partenón</span>
+        <span class="dp star">⭐ Monte Licabeto al atardecer</span>
+        <span class="dp">Museo Arqueológico</span>
+      </div>
+    </div>
+  </div>
+  <div class="lb">
+    <div class="li"><div class="ll">Hotel</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Omiros+Hotel+Athens+Greece" target="_blank">Omiros Hotel Atenas</a></div></div>
+    <div class="li"><div class="ll">Ruta del día</div><div class="lv">Acrópolis (mañana) → Museo Arqueológico → Monte Licabeto (tarde)</div></div>
+  </div>
+  <div class="acts-grid">
+    <div class="act star">
+      <div class="act-img" style="background-image:url('https://images.unsplash.com/photo-1555993539-1732b0258235?w=800&q=80')"><span class="act-sb">⭐ Imperdible — llegar 8:30</span></div>
+      <div class="ab"><h4><a class="map-link" href="https://maps.google.com/?q=Acropolis+Athens+Greece" target="_blank">Acrópolis & Partenón</a></h4>
+      <ul><li>El monumento antiguo más icónico del mundo</li><li>Partenón: templo de Atenea construido en 447 a.C.</li><li>Erecteion con las Cariátides · Teatro de Dioniso</li><li>Llegar antes de las 9:00 AM — antes del calor y las multitudes</li><li>Entrada combinada: 7 sitios arqueológicos</li></ul>
+      <div class="atags"><span class="tag tpend">Llegar 08:30</span><span class="tag tok">~2.5h</span></div></div></div>
+    <div class="act"><div class="ab"><h4>🏺 <a class="map-link" href="https://maps.google.com/?q=National+Archaeological+Museum+Athens" target="_blank">Museo Arqueológico Nacional</a></h4>
+      <ul><li>El más importante de Grecia</li><li>La Máscara de Agamenón en oro sólido</li><li>Tesoros de Micenas y toda la Grecia antigua</li><li>A 10 min de la Acrópolis en metro</li></ul>
+      <div class="atags"><span class="tag tok">12:00–13:30</span><span class="tag tgold">~€15</span></div></div></div>
+    <div class="act star">
+      <div class="act-img" style="background-image:url('https://images.unsplash.com/photo-1617397204367-41e25b5c88f0?w=800&q=80')"><span class="act-sb">⭐ Vista 360°</span></div>
+      <div class="ab"><h4><a class="map-link" href="https://maps.google.com/?q=Mount+Lycabettus+Athens+Greece" target="_blank">Monte Licabeto</a> al atardecer</h4>
+      <ul><li>El punto más alto de Atenas — vista de 360° sobre la ciudad</li><li>Se ve la Acrópolis, el mar Egeo y toda la cuenca</li><li>Funicular desde Kolonaki · ~10 min</li><li>Restaurante en la cima para cena con esa vista</li></ul>
+      <div class="atags"><span class="tag tok">17:00–20:00</span><span class="tag tblue">Atardecer</span></div></div></div>
+  </div>
+</div>
+
+<!-- ===== DÍA 9: 5 NOV — ATENAS → ROMA ===== -->
+<div class="day-card" data-date="2026-11-05" id="day-20261105">
+  <div class="day-header">
+    <div class="day-img" style="background-image:url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&q=80')"></div>
+    <div class="day-info">
+      <div class="day-pill">Día 9 · Jueves 5 Nov</div>
+      <h3>🇬🇷 Atenas → 🇮🇹 Roma</h3>
+      <p class="city">Vuelo ITA Airways · Llegada Roma · Trastevere</p>
+      <div class="dpills">
+        <span class="dp">ITA X6SCXX · ATH → ROM</span>
+        <span class="dp star">⭐ Barrio Trastevere</span>
+        <span class="dp twarn">Hotel Roma ⏳ Pendiente</span>
+      </div>
+    </div>
+  </div>
+  <div class="lb">
+    <div class="li"><div class="ll">Check-out</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Omiros+Hotel+Athens+Greece" target="_blank">Omiros Hotel</a></div></div>
+    <div class="li"><div class="ll">Vuelo</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Aeropuerto+Atenas+Eleftherios+Venizelos" target="_blank">ATH</a> → <a class="map-link" href="https://maps.google.com/?q=Aeropuerto+Roma+Fiumicino" target="_blank">ROM Fiumicino</a> · ITA X6SCXX</div></div>
+    <div class="li"><div class="ll">Hotel ROM</div><div class="lv">⚠️ PENDIENTE RESERVAR · 2 hab / 7 pax / 5-7 Nov</div></div>
+  </div>
+  <div class="acts-grid">
+    <div class="act"><div class="ab"><h4>✈️ Mañana: Vuelo a Roma</h4>
+      <ul><li>ITA Airways X6SCXX · ATH → Roma Fiumicino</li><li>Aeropuerto Roma Fiumicino (FCO) · Terminal 3</li><li>Leonardo Express: tren directo al centro · 32 min · €14</li></ul>
+      <div class="atags"><span class="tag tok">Mañana</span></div></div></div>
+    <div class="act star">
+      <div class="act-img" style="background-image:url('https://images.unsplash.com/photo-1529260830199-42c24126f198?w=800&q=80')"><span class="act-sb">⭐ Tarde</span></div>
+      <div class="ab"><h4><a class="map-link" href="https://maps.google.com/?q=Trastevere+Rome+Italy" target="_blank">Barrio Trastevere</a></h4>
+      <ul><li>El barrio más bohemio y auténtico de Roma</li><li>Callejuelas medievales con hiedra y flores en las fachadas</li><li>Basílica de Santa Maria in Trastevere: mosaicos dorados</li><li>Mejor zona para cenar pizza y pasta auténtica romana</li></ul>
+      <div class="atags"><span class="tag tok">Tarde-noche</span></div></div></div>
+    <div class="act"><div class="ab"><h4>🍕 Primera cena romana</h4>
+      <ul><li>Cacio e Pepe: pasta con queso pecorino y pimienta</li><li>Carbonara auténtica: huevo, guanciale y pecorino (sin nata)</li><li>Gelato artesanal — buscar letreros "artigianale"</li><li>Evitar restaurantes con fotos plastificadas en la entrada</li></ul>
+      <div class="atags"><span class="tag tok">Noche</span></div></div></div>
+  </div>
+</div>
+
+<!-- ===== DÍA 10: 6 NOV — ROMA ===== -->
+<div class="day-card" data-date="2026-11-06" id="day-20261106">
+  <div class="day-header">
+    <div class="day-img" style="background-image:url('https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=800&q=80')"></div>
+    <div class="day-info">
+      <div class="day-pill">Día 10 · Viernes 6 Nov</div>
+      <h3>🇮🇹 Roma — La Ciudad Eterna</h3>
+      <p class="city">Coliseo · Vaticano · Fontana di Trevi · Pantheon</p>
+      <div class="dpills">
+        <span class="dp star">⭐ Coliseo & Foro Romano</span>
+        <span class="dp star">⭐ Vaticano & Sixtina</span>
+        <span class="dp">Fontana di Trevi</span>
+        <span class="dp">Pantheon</span>
+      </div>
+    </div>
+  </div>
+  <div class="lb">
+    <div class="li"><div class="ll">Hotel Roma</div><div class="lv">⏳ Pendiente reservar · 2 hab / 7 pax</div></div>
+    <div class="li"><div class="ll">Ruta del día</div><div class="lv">Coliseo (mañana) → Vaticano (tarde) → Trevi + Pantheon (noche)</div></div>
+  </div>
+  <div class="acts-grid">
+    <div class="act star">
+      <div class="act-img" style="background-image:url('https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=800&q=80')"><span class="act-sb">⭐ Imperdible</span></div>
+      <div class="ab"><h4><a class="map-link" href="https://maps.google.com/?q=Colosseum+Rome+Italy" target="_blank">Coliseo</a> & <a class="map-link" href="https://maps.google.com/?q=Roman+Forum+Rome" target="_blank">Foro Romano</a></h4>
+      <ul><li>El anfiteatro más grande jamás construido — 50,000 espectadores</li><li>Foro Romano: corazón político de la Roma antigua</li><li>Colina Palatina: donde vivían los emperadores</li><li>Reservar en coopculture.it — entrada combinada 3 sitios</li></ul>
+      <div class="atags"><span class="tag tpend">Reservar coopculture.it</span><span class="tag tok">08:30–12:00</span></div></div></div>
+    <div class="act star">
+      <div class="act-img" style="background-image:url('https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=800&q=80')"><span class="act-sb">⭐ Imperdible</span></div>
+      <div class="ab"><h4><a class="map-link" href="https://maps.google.com/?q=Vatican+Museums+Rome" target="_blank">Vaticano</a> & <a class="map-link" href="https://maps.google.com/?q=Sistine+Chapel+Vatican+City" target="_blank">Capilla Sixtina</a></h4>
+      <ul><li>El Estado más pequeño del mundo — 44 hectáreas</li><li>Capilla Sixtina: Miguel Ángel pintó el techo en 4 años</li><li>La Creación de Adán: el fresco más reproducido de la historia</li><li>🚨 Reservar con semanas en museivaticani.va</li></ul>
+      <div class="atags"><span class="tag tpend">Reservar museivaticani.va</span><span class="tag tok">13:30–17:00</span></div></div></div>
+    <div class="act"><div class="ab"><h4>🌙 Noche: <a class="map-link" href="https://maps.google.com/?q=Trevi+Fountain+Rome" target="_blank">Trevi</a> + <a class="map-link" href="https://maps.google.com/?q=Pantheon+Rome+Italy" target="_blank">Pantheon</a></h4>
+      <ul><li>Fontana di Trevi: lanzar moneda sobre el hombro izquierdo</li><li>Mejor de noche — iluminada es absolutamente mágica</li><li>Pantheon: perfecto estado tras 2,000 años</li><li>Plaza Navona: ambiente nocturno con artistas callejeros</li></ul>
+      <div class="atags"><span class="tag tok">20:00–22:00</span><span class="tag tblue">De noche</span></div></div></div>
+  </div>
+</div>
+
+<!-- ===== DÍA 11: 7 NOV — ROMA → MADRID ===== -->
+<div class="day-card" data-date="2026-11-07" id="day-20261107">
+  <div class="day-header">
+    <div class="day-img" style="background-image:url('https://images.unsplash.com/photo-1581927692308-be9e43b4d860?w=800&q=80')"></div>
+    <div class="day-info">
+      <div class="day-pill">Día 11 · Sábado 7 Nov</div>
+      <h3>🇮🇹 Roma → 🇪🇸 Madrid</h3>
+      <p class="city">Mañana en Roma · Vuelo ITA · Noche en Madrid</p>
+      <div class="dpills">
+        <span class="dp">ITA X5K8AQ · ROM → MAD</span>
+        <span class="dp"><a class="map-link" href="https://maps.google.com/?q=Piazza+Navona+Rome" target="_blank" style="color:inherit">Plaza Navona</a></span>
+        <span class="dp"><a class="map-link" href="https://maps.google.com/?q=Campo+de+Fiori+Rome" target="_blank" style="color:inherit">Campo de' Fiori</a></span>
+      </div>
+    </div>
+  </div>
+  <div class="lb">
+    <div class="li"><div class="ll">Check-out Roma</div><div class="lv">Hotel pendiente · Mañana</div></div>
+    <div class="li"><div class="ll">Vuelo</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Aeropuerto+Roma+Fiumicino" target="_blank">Roma Fiumicino</a> → <a class="map-link" href="https://maps.google.com/?q=Aeropuerto+Adolfo+Suarez+Madrid+Barajas" target="_blank">MAD</a> · ITA X5K8AQ</div></div>
+    <div class="li"><div class="ll">Noche Madrid</div><div class="lv">Hotel cerca aeropuerto recomendado · AV27 sale 06:35 del 8 Nov</div></div>
+  </div>
+  <div class="acts-grid">
+    <div class="act"><div class="ab"><h4>🌅 Mañana: Últimas horas en Roma</h4>
+      <ul><li><a class="map-link" href="https://maps.google.com/?q=Campo+de+Fiori+Rome" target="_blank">Campo de' Fiori</a>: mercado de flores y frutas matutino</li><li><a class="map-link" href="https://maps.google.com/?q=Piazza+Navona+Rome" target="_blank">Piazza Navona</a>: la plaza barroca más bella de Roma</li><li>Espresso en barra al estilo romano: la experiencia más auténtica</li><li>Compras de souvenirs italianos de calidad</li></ul>
+      <div class="atags"><span class="tag tok">Mañana</span></div></div></div>
+    <div class="act"><div class="ab"><h4>✈️ Vuelo a Madrid</h4>
+      <ul><li>ITA X5K8AQ · Roma FCO → Madrid MAD</li><li>Tomar Leonardo Express al aeropuerto · 32 min</li><li>Al llegar Madrid: descanso — mañana sale el vuelo de regreso a GUA</li><li>AV27 sale 06:35 del 8 Nov — levantarse muy temprano</li></ul>
+      <div class="atags"><span class="tag twarn">AV27 sale 06:35 mañana</span></div></div></div>
+  </div>
+</div>
+
+<!-- ===== DÍA 12: 8 NOV — MADRID → BOGOTÁ → GUA ===== -->
+<div class="day-card" data-date="2026-11-08" id="day-20261108">
+  <div class="day-header">
+    <div class="day-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80')"></div>
+    <div class="day-info">
+      <div class="day-pill">Día 12 · Domingo 8 Nov · Regreso + Bogotá</div>
+      <h3>🇪🇸→🇨🇴 Bogotá · 11h de aventura</h3>
+      <p class="city">MAD 06:35 → BOG 10:55 · ¡11 horas para explorar! · BOG 23:15 → GUA</p>
+      <div class="dpills">
+        <span class="dp star">⭐ Museo del Oro</span>
+        <span class="dp star">⭐ Cerro Monserrate al atardecer</span>
+        <span class="dp">Usaquén · Zona Rosa</span>
+      </div>
+    </div>
+  </div>
+  <div class="lb">
+    <div class="li"><div class="ll">Sale MAD</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Aeropuerto+Adolfo+Suarez+Madrid+Barajas" target="_blank">MAD T4S</a> · AV27 · 06:35</div></div>
+    <div class="li"><div class="ll">Llegan BOG</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Aeropuerto+El+Dorado+Bogota+Colombia" target="_blank">El Dorado T1</a> · 10:55</div></div>
+    <div class="li"><div class="ll">Salen BOG</div><div class="lv">AV164 · 23:15 · Regresar aeropuerto 20:45</div></div>
+    <div class="li"><div class="ll">Llegan GUA</div><div class="lv"><a class="map-link" href="https://maps.google.com/?q=Aeropuerto+Internacional+La+Aurora+Guatemala" target="_blank">La Aurora GUA</a> · 01:40 del 9 Nov</div></div>
+  </div>
+  <div class="acts-grid">
+    <div class="act star">
+      <div class="act-img" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80')"><span class="act-sb">⭐ Imperdible</span></div>
+      <div class="ab"><h4><a class="map-link" href="https://maps.google.com/?q=Museo+del+Oro+Bogota+Colombia" target="_blank">Museo del Oro</a> · 11:30 AM</h4>
+      <ul><li>El mejor museo de Colombia y latinoamérica</li><li>La Sala Dorada: experiencia de 360° entre miles de piezas de oro</li><li>La Balsa Muisca: la pieza más icónica</li><li>A 30 min del aeropuerto en taxi/Uber</li><li>Abre Martes-Sábado 9:00 · Entrada ~$3 USD</li></ul>
+      <div class="atags"><span class="tag tok">11:30–13:30</span><span class="tag tgold">$3 USD</span></div></div></div>
+    <div class="act"><div class="ab"><h4>🍽 Almuerzo: <a class="map-link" href="https://maps.google.com/?q=Usaquen+Bogota+Colombia" target="_blank">Usaquén</a></h4>
+      <ul><li>Barrio colonial chic con restaurantes de alta calidad</li><li>Ajiaco bogotano: la sopa más tradicional de Colombia</li><li>Jugos exóticos: maracuyá, guanábana, lulo, tomate de árbol</li><li>Si es domingo: feria de artesanías en las calles</li></ul>
+      <div class="atags"><span class="tag tok">13:30–15:00</span></div></div></div>
+    <div class="act star">
+      <div class="act-img" style="background-image:url('https://images.unsplash.com/photo-1605216663980-b7ca6e9fffff?w=800&q=80')"><span class="act-sb">⭐ Atardecer mágico</span></div>
+      <div class="ab"><h4><a class="map-link" href="https://maps.google.com/?q=Cerro+Monserrate+Bogota+Colombia" target="_blank">Cerro de Monserrate</a></h4>
+      <ul><li>3,152 metros — vista de 360° sobre toda Bogotá</li><li>Santuario colonial del Señor Caído</li><li>Teleférico o funicular: ~$10 USD ida y vuelta</li><li>El atardecer sobre Bogotá es absolutamente mágico</li><li>Cena en el restaurante de la cima</li></ul>
+      <div class="atags"><span class="tag tok">16:00–18:30</span><span class="tag tblue">Atardecer</span></div></div></div>
+    <div class="act"><div class="ab"><h4>✈️ Regreso al aeropuerto El Dorado</h4>
+      <ul><li>Regresar al aeropuerto a las 20:45 como máximo</li><li>AV164 sale 23:15 · Terminal 1</li><li>Duty free: café colombiano Juan Valdez para llevar</li><li>¡Llegada Guatemala 01:40 AM del 9 noviembre!</li><li>Coordinar transporte desde La Aurora con anticipación</li></ul>
+      <div class="atags"><span class="tag tpend">Regresar BOG 20:45</span></div></div></div>
+  </div>
+</div>
+
+</div><!-- /wrap -->
+</section>
+
+<!-- ================================================================
+     MAPAS & NAVEGACIÓN
+================================================================ -->
+<section id="maps" class="sec">
+<div class="sh"><p class="e">✦ Doble click en cualquier lugar para abrir Google Maps</p><h2>Mapas & <em>Navegación</em></h2></div>
+<div class="wrap">
+  <div class="today-map-note" id="map-today-note">📍 Cargando día actual del viaje...</div>
+
+  <div class="map-day">
+    <h3>Día 1 · 28 Oct — Aeropuertos (Salida)</h3>
+    <div class="map-links-grid">
+      <a class="map-btn" href="https://maps.google.com/?q=Aeropuerto+Internacional+La+Aurora+Guatemala+City" target="_blank"><span class="ico">🛫</span><div class="txt"><div class="name">Aeropuerto La Aurora</div><div class="detail">Guatemala City · Salida 09:30</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Aeropuerto+El+Dorado+Bogota+Colombia" target="_blank"><span class="ico">🔄</span><div class="txt"><div class="name">El Dorado — Bogotá</div><div class="detail">Escala 13:40–17:25 · Solo aeropuerto</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Aeropuerto+Adolfo+Suarez+Madrid+Barajas+Terminal+4S" target="_blank"><span class="ico">🛬</span><div class="txt"><div class="name">MAD Barajas T4S</div><div class="detail">Llegada 29 Oct 08:50</div></div><span class="arr">→</span></a>
+    </div>
+  </div>
+
+  <div class="map-day">
+    <h3>Días 2–3 · 29–30 Oct — Madrid 🇪🇸</h3>
+    <div class="map-links-grid">
+      <a class="map-btn" href="https://maps.google.com/?q=Gran+Via+63+Rooms+Hotel+Madrid" target="_blank"><span class="ico">🏨</span><div class="txt"><div class="name">Hotel Gran Via 63 Rooms</div><div class="detail">Conf. 6034420256 · Check-in 15:00</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Museo+del+Prado+Madrid+Spain" target="_blank"><span class="ico">🎨</span><div class="txt"><div class="name">Museo del Prado</div><div class="detail">Gratis desde 18:00</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Plaza+Mayor+Madrid+Spain" target="_blank"><span class="ico">🏛</span><div class="txt"><div class="name">Plaza Mayor</div><div class="detail">Centro histórico</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Puerta+del+Sol+Madrid+Spain" target="_blank"><span class="ico">⭕</span><div class="txt"><div class="name">Puerta del Sol</div><div class="detail">Corazón de Madrid</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Parque+del+Retiro+Madrid+Spain" target="_blank"><span class="ico">🌿</span><div class="txt"><div class="name">Parque del Retiro</div><div class="detail">Paseo matutino</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Mercado+San+Miguel+Madrid" target="_blank"><span class="ico">🍷</span><div class="txt"><div class="name">Mercado San Miguel</div><div class="detail">Gastronomía española</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Estacion+Madrid+Atocha+Almudena+Grandes" target="_blank"><span class="ico">🚄</span><div class="txt"><div class="name">Estación Atocha</div><div class="detail">OUIGO 20:10 → Barcelona · MKMP72</div></div><span class="arr">→</span></a>
+    </div>
+  </div>
+
+  <div class="map-day">
+    <h3>Día 4 · 31 Oct — Barcelona 🇪🇸</h3>
+    <div class="map-links-grid">
+      <a class="map-btn" href="https://maps.google.com/?q=Estacion+Barcelona+Sants" target="_blank"><span class="ico">🚄</span><div class="txt"><div class="name">Barcelona Sants</div><div class="detail">Llegada 23:28 el 30 Oct</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Leonardo+Boutique+Hotel+Barcelona+Sagrada+Familia" target="_blank"><span class="ico">🏨</span><div class="txt"><div class="name">Hotel Leonardo Boutique</div><div class="detail">Conf. 5112312061 · PIN 9405</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Sagrada+Familia+Barcelona+Spain" target="_blank"><span class="ico">⛪</span><div class="txt"><div class="name">Sagrada Família</div><div class="detail">Reservar urgente · sagradafamilia.org</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Las+Ramblas+Barcelona+Spain" target="_blank"><span class="ico">🌳</span><div class="txt"><div class="name">Las Ramblas</div><div class="detail">Bulevar principal de Barcelona</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Mercado+de+la+Boqueria+Barcelona" target="_blank"><span class="ico">🛒</span><div class="txt"><div class="name">Mercado de La Boquería</div><div class="detail">Gastronomía barcelonesa</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Aeropuerto+El+Prat+Barcelona" target="_blank"><span class="ico">✈️</span><div class="txt"><div class="name">Aeropuerto El Prat BCN</div><div class="detail">TO4757 · 19:25 → París · R8L16Y</div></div><span class="arr">→</span></a>
+    </div>
+  </div>
+
+  <div class="map-day">
+    <h3>Días 5–7 · 1–3 Nov — París 🇫🇷</h3>
+    <div class="map-links-grid">
+      <a class="map-btn" href="https://maps.google.com/?q=Aeropuerto+Paris+Orly" target="_blank"><span class="ico">✈️</span><div class="txt"><div class="name">París Orly ORY</div><div class="detail">Llegada 31 Oct 21:25</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Home+Latin+Hotel+Paris+France" target="_blank"><span class="ico">🏨</span><div class="txt"><div class="name">Hotel Home Latin</div><div class="detail">Conf. 5451500041 · PIN 7530</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Disneyland+Paris+Marne-la-Vallee" target="_blank"><span class="ico">🏰</span><div class="txt"><div class="name">Disneyland París</div><div class="detail">1 Nov · Todo el día · RER A</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Sacre+Coeur+Montmartre+Paris" target="_blank"><span class="ico">⛪</span><div class="txt"><div class="name">Sacré-Cœur · Montmartre</div><div class="detail">2 Nov mañana</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Louvre+Museum+Paris+France" target="_blank"><span class="ico">🎨</span><div class="txt"><div class="name">Museo del Louvre</div><div class="detail">Mona Lisa · Reservar louvre.fr</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Eiffel+Tower+Paris+France" target="_blank"><span class="ico">🗼</span><div class="txt"><div class="name">Torre Eiffel</div><div class="detail">Ver de noche con luces</div></div><span class="arr">→</span></a>
+    </div>
+  </div>
+
+  <div class="map-day">
+    <h3>Días 8–9 · 3–5 Nov — Atenas 🇬🇷</h3>
+    <div class="map-links-grid">
+      <a class="map-btn" href="https://maps.google.com/?q=Aeropuerto+Atenas+Eleftherios+Venizelos" target="_blank"><span class="ico">✈️</span><div class="txt"><div class="name">Aeropuerto Atenas ATH</div><div class="detail">Llegada TO3520 · 13:50</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Omiros+Hotel+Athens+Greece" target="_blank"><span class="ico">🏨</span><div class="txt"><div class="name">Omiros Hotel</div><div class="detail">Conf. 5112331414 · PIN 7486</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Acropolis+of+Athens+Greece" target="_blank"><span class="ico">🏛</span><div class="txt"><div class="name">Acrópolis de Atenas</div><div class="detail">Llegar 08:30 AM</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Plaka+neighborhood+Athens+Greece" target="_blank"><span class="ico">🏘</span><div class="txt"><div class="name">Barrio Plaka</div><div class="detail">Al pie de la Acrópolis</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=National+Archaeological+Museum+Athens" target="_blank"><span class="ico">🏺</span><div class="txt"><div class="name">Museo Arqueológico Nacional</div><div class="detail">Máscara de Agamenón</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Mount+Lycabettus+Athens+Greece" target="_blank"><span class="ico">🌄</span><div class="txt"><div class="name">Monte Licabeto</div><div class="detail">Atardecer · Vista 360°</div></div><span class="arr">→</span></a>
+    </div>
+  </div>
+
+  <div class="map-day">
+    <h3>Días 10–11 · 5–7 Nov — Roma 🇮🇹</h3>
+    <div class="map-links-grid">
+      <a class="map-btn" href="https://maps.google.com/?q=Aeropuerto+Roma+Fiumicino+FCO" target="_blank"><span class="ico">✈️</span><div class="txt"><div class="name">Roma Fiumicino FCO</div><div class="detail">Llegada ITA X6SCXX</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Colosseum+Rome+Italy" target="_blank"><span class="ico">🏟</span><div class="txt"><div class="name">Coliseo Romano</div><div class="detail">Reservar coopculture.it</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Vatican+Museums+Vatican+City+Rome" target="_blank"><span class="ico">⛪</span><div class="txt"><div class="name">Museos Vaticanos</div><div class="detail">Capilla Sixtina · museivaticani.va</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Trevi+Fountain+Rome+Italy" target="_blank"><span class="ico">⛲</span><div class="txt"><div class="name">Fontana di Trevi</div><div class="detail">De noche · Lanzar moneda</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Pantheon+Rome+Italy" target="_blank"><span class="ico">🏛</span><div class="txt"><div class="name">Pantheon</div><div class="detail">2,000 años en perfecto estado</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Trastevere+Rome+Italy" target="_blank"><span class="ico">🍕</span><div class="txt"><div class="name">Barrio Trastevere</div><div class="detail">Mejor zona para cenar</div></div><span class="arr">→</span></a>
+    </div>
+  </div>
+
+  <div class="map-day">
+    <h3>Día 12 · 8 Nov — Bogotá (escala retorno) 🇨🇴</h3>
+    <div class="map-links-grid">
+      <a class="map-btn" href="https://maps.google.com/?q=Museo+del+Oro+Bogota+Colombia" target="_blank"><span class="ico">🥇</span><div class="txt"><div class="name">Museo del Oro</div><div class="detail">11:30 AM · El mejor de Colombia</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Cerro+Monserrate+Bogota+Colombia" target="_blank"><span class="ico">⛰️</span><div class="txt"><div class="name">Cerro de Monserrate</div><div class="detail">16:00 · Atardecer mágico</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Usaquen+Bogota+Colombia" target="_blank"><span class="ico">🍽</span><div class="txt"><div class="name">Usaquén</div><div class="detail">Almuerzo · Ajiaco colombiano</div></div><span class="arr">→</span></a>
+      <a class="map-btn" href="https://maps.google.com/?q=Aeropuerto+El+Dorado+Bogota+Colombia+Terminal+1" target="_blank"><span class="ico">🛫</span><div class="txt"><div class="name">El Dorado · Vuelo a GUA</div><div class="detail">AV164 · 23:15 · Llegar 20:45</div></div><span class="arr">→</span></a>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<!-- ================================================================
+     COSTOS
+================================================================ -->
+<section id="costs" class="sec">
+<div class="sh"><p class="e">✦ Desglose completo verificado</p><h2>Costos del <em>Viaje</em></h2></div>
+<div class="wrap">
+  <div class="sg">
+    <div class="sc"><div class="i">🌍</div><div class="l">Total Viaje</div><div class="v">$14,520</div><div class="s">7 pasajeros</div></div>
+    <div class="sc"><div class="i">👤</div><div class="l">Por Persona</div><div class="v">$2,074</div><div class="s">promedio</div></div>
+    <div class="sc"><div class="i">📅</div><div class="l">Por Día/Familia</div><div class="v">$1,210</div><div class="s">12 días</div></div>
+    <div class="sc"><div class="i">💚</div><div class="l">vs Presupuesto</div><div class="v">-$48</div><div class="s">dentro del límite ✅</div></div>
+  </div>
+
+  <p class="st">✈️ Vuelos Internacionales — Avianca BUKRK3</p>
+  <div class="tw"><table>
+    <thead><tr><th>Tramo</th><th>Vuelo</th><th>Fecha</th><th>Horario</th><th>Estado</th></tr></thead>
+    <tbody>
+      <tr><td class="lc">GUA → Bogotá</td><td>AV743 (Aviateca)</td><td>28 Oct</td><td>09:30 → 13:40</td><td><span class="tag tok">✓ OK</span></td></tr>
+      <tr><td class="lc">Bogotá → Madrid</td><td>AV182</td><td>28 Oct</td><td>17:25 → 08:50+1</td><td><span class="tag tok">✓ OK</span></td></tr>
+      <tr><td class="lc">Madrid → Bogotá</td><td>AV27</td><td>8 Nov</td><td>06:35 → 10:55</td><td><span class="tag tok">✓ OK</span></td></tr>
+      <tr><td class="lc">Bogotá → GUA</td><td>AV164</td><td>8 Nov</td><td>23:15 → 01:40+1</td><td><span class="tag tok">✓ OK</span></td></tr>
+      <tr class="trt"><td colspan="4"><strong>BUKRK3 · Tarifa LIGHT · ✅ Maleta 10 kg incluida · $1,002.90/pax × 7</strong></td><td class="amt"><strong>$7,020</strong></td></tr>
+    </tbody>
+  </table></div>
+
+  <p class="st">🏨 Alojamientos — 10 Noches</p>
+  <div class="tw"><table>
+    <thead><tr><th>Ciudad</th><th>Hotel</th><th>Fechas</th><th>Hab.</th><th>Conf.</th><th>PIN</th><th>USD</th></tr></thead>
+    <tbody>
+      <tr><td class="lc">🇪🇸 Madrid</td><td>Gran Via 63 Rooms</td><td>29-30 Oct · 1n</td><td>2 hab ✅</td><td>6034420256</td><td>5695</td><td><strong>$370</strong></td></tr>
+      <tr><td class="lc">🇪🇸 Barcelona</td><td>Leonardo Boutique SGF</td><td>30-31 Oct · 1n</td><td>2 hab ✅</td><td>5112312061</td><td>9405</td><td><strong>$520</strong></td></tr>
+      <tr><td class="lc">🇫🇷 París</td><td>Home Latin</td><td>31Oct-3Nov · 3n</td><td>2 hab ✅</td><td>5451500041</td><td>7530</td><td><strong>$1,408</strong></td></tr>
+      <tr><td class="lc">🇬🇷 Atenas</td><td>Omiros Hotel</td><td>3-5 Nov · 2n</td><td>2 hab ✅</td><td>5112331414</td><td>7486</td><td><strong>$370</strong></td></tr>
+      <tr><td class="lc">🇮🇹 Roma</td><td>⏳ Pendiente</td><td>5-7 Nov · 2n</td><td>2 hab ⚠️</td><td>—</td><td>—</td><td><strong>~$650</strong></td></tr>
+      <tr class="trt"><td colspan="6"><strong>Subtotal · 10 noches · 2 hab</strong></td><td class="amt"><strong>$3,318</strong></td></tr>
+    </tbody>
+  </table></div>
+
+  <p class="st">🚄 Transporte Interno Europa</p>
+  <div class="tw"><table>
+    <thead><tr><th>Trayecto</th><th>Operador</th><th>Reserva</th><th>Fecha</th><th>Horario</th><th>USD</th></tr></thead>
+    <tbody>
+      <tr><td class="lc">🚄 Madrid → BCN</td><td>OUIGO T.07415</td><td>MKMP72 · C.16</td><td>30 Oct</td><td>20:10→23:28</td><td><strong>$253</strong></td></tr>
+      <tr><td class="lc">✈️ BCN → PAR</td><td>Transavia TO4757</td><td>R8L16Y</td><td>31 Oct</td><td>19:25→21:25</td><td><strong>$1,296</strong></td></tr>
+      <tr><td class="lc">✈️ PAR → ATH</td><td>Transavia TO3520</td><td>GFLNPD</td><td>3 Nov</td><td>09:35→13:50</td><td><strong>$877</strong></td></tr>
+      <tr><td class="lc">✈️ ATH → ROM</td><td>ITA Airways</td><td>X6SCXX</td><td>5 Nov</td><td>—</td><td><strong>$728</strong></td></tr>
+      <tr><td class="lc">✈️ ROM → MAD</td><td>ITA Airways</td><td>X5K8AQ</td><td>7 Nov</td><td>—</td><td><strong>$728</strong></td></tr>
+      <tr class="trt"><td colspan="5"><strong>Subtotal Transporte Interno</strong></td><td class="amt"><strong>$3,882</strong></td></tr>
+    </tbody>
+  </table></div>
+
+  <p class="st">📊 Total General</p>
+  <div class="tw"><table>
+    <thead><tr><th>#</th><th>Concepto</th><th>Estado</th><th>USD</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td class="lc">✈️ Avianca GUA↔MAD · Maleta 10kg incluida</td><td><span class="tag tok">✓ Confirmado</span></td><td><strong>$7,020</strong></td></tr>
+      <tr><td>2</td><td class="lc">🏨 Hotel Madrid · Gran Via 63</td><td><span class="tag tok">✓ Confirmado</span></td><td><strong>$370</strong></td></tr>
+      <tr><td>3</td><td class="lc">🚄 Tren MAD→BCN · OUIGO MKMP72</td><td><span class="tag tok">✓ Confirmado</span></td><td><strong>$253</strong></td></tr>
+      <tr><td>4</td><td class="lc">🏨 Hotel Barcelona · Leonardo Boutique</td><td><span class="tag tok">✓ Confirmado</span></td><td><strong>$520</strong></td></tr>
+      <tr><td>5</td><td class="lc">✈️ BCN→PAR · Transavia R8L16Y</td><td><span class="tag tok">✓ Confirmado</span></td><td><strong>$1,296</strong></td></tr>
+      <tr><td>6</td><td class="lc">🏨 Hotel París · Home Latin</td><td><span class="tag tok">✓ Confirmado</span></td><td><strong>$1,408</strong></td></tr>
+      <tr><td>7</td><td class="lc">✈️ PAR→ATH · Transavia GFLNPD</td><td><span class="tag tok">✓ Confirmado</span></td><td><strong>$877</strong></td></tr>
+      <tr><td>8</td><td class="lc">🏨 Hotel Atenas · Omiros Hotel</td><td><span class="tag tok">✓ Confirmado</span></td><td><strong>$370</strong></td></tr>
+      <tr><td>9</td><td class="lc">✈️ ATH→ROM · ITA X6SCXX</td><td><span class="tag tok">✓ Confirmado</span></td><td><strong>$728</strong></td></tr>
+      <tr><td>10</td><td class="lc">🏨 Hotel Roma · 2 noches</td><td><span class="tag tpend">⏳ Pendiente</span></td><td><strong>~$650</strong></td></tr>
+      <tr><td>11</td><td class="lc">✈️ ROM→MAD · ITA X5K8AQ</td><td><span class="tag tok">✓ Confirmado</span></td><td><strong>$728</strong></td></tr>
+      <tr><td>12</td><td class="lc">🚕 Traslados locales</td><td><span class="tag twarn">Estimado</span></td><td><strong>$300</strong></td></tr>
+      <tr class="trt"><td colspan="3"><strong>TOTAL GENERAL (7 Pasajeros · 12 Días)</strong></td><td class="amt" style="font-size:1.1rem"><strong>$14,520</strong></td></tr>
+      <tr class="trb"><td colspan="3">Presupuesto original</td><td><strong>$14,568</strong></td></tr>
+      <tr class="trg"><td colspan="3">✅ Diferencia (ahorro)</td><td><strong>-$48</strong></td></tr>
+    </tbody>
+  </table></div>
+</div>
+</section>
+
+<!-- ================================================================
+     PASAJEROS
+================================================================ -->
+<section id="pax" class="sec">
+<div class="sh"><p class="e">✦ 7 de 7 verificados en todos los transportes</p><h2>Viajeros <em>De León</em></h2></div>
+<div class="wrap">
+  <div class="pg">
+    <div class="pc"><div class="pn">1</div><div><div class="pname">Soto Paz Manuel Rudy</div><div class="ptk">Avianca 202-2490541386</div></div></div>
+    <div class="pc"><div class="pn">2</div><div><div class="pname">De Leon Herrera Nanci Bresania</div><div class="ptk">Avianca 202-2490541380</div></div></div>
+    <div class="pc"><div class="pn">3</div><div><div class="pname">Soto De Leon Anayansi</div><div class="ptk">Avianca 202-2490541384</div></div></div>
+    <div class="pc"><div class="pn">4</div><div><div class="pname">Soto De Leon Zoe Maria</div><div class="ptk">Avianca 202-2490541385</div></div></div>
+    <div class="pc"><div class="pn">5</div><div><div class="pname">Herrera Hernandez Zonia Edelmira</div><div class="ptk">Avianca 202-2490541383</div></div></div>
+    <div class="pc"><div class="pn">6</div><div><div class="pname">De Leon Herrera Uri Jose</div><div class="ptk">Avianca 202-2490541381</div></div></div>
+    <div class="pc"><div class="pn">7</div><div><div class="pname">De Leon Lopez Dilan Jeseph</div><div class="ptk">Avianca 202-2490541382</div></div></div>
+  </div>
+  <div class="tw"><table>
+    <thead><tr><th>Pasajero</th><th>Avianca</th><th>Transavia BCN→PAR</th><th>Transavia PAR→ATH</th><th>OUIGO</th><th>ITA ATH↔MAD</th></tr></thead>
+    <tbody>
+      <tr><td class="lc">Rudy Soto Paz</td><td><span class="tag tok">✓</span></td><td><span class="tag tok">✓</span></td><td><span class="tag tok">✓ 6C</span></td><td><span class="tag tok">✓</span></td><td><span class="tag tok">✓</span></td></tr>
+      <tr><td class="lc">Nanci De Leon H.</td><td><span class="tag tok">✓</span></td><td><span class="tag tok">✓</span></td><td><span class="tag tok">✓ 6B</span></td><td><span class="tag tok">✓</span></td><td><span class="tag tok">✓</span></td></tr>
+      <tr><td class="lc">Anayansi Soto DL</td><td><span class="tag tok">✓</span></td><td><span class="tag tok">✓</span></td><td><span class="tag tok">✓ 6A</span></td><td><span class="tag tok">✓</span></td><td><span class="tag tok">✓</span></td></tr>
+      <tr><td class="lc">Zoe Soto De Leon</td><td><span class="tag tok">✓</span></td><td><span class="tag tok">✓</span></td><td><span class="tag tok">✓ 6D</span></td><td><span class="tag tok">✓</span></td><td><span class="tag tok">✓</span></td></tr>
+      <tr><td class="lc">Zonia Herrera H.</td><td><span class="tag tok">✓</span></td><td><span class="tag tok">✓</span></td><td><span class="tag tok">✓ 6E</span></td><td><span class="tag tok">✓</span></td><td><span class="tag tok">✓</span></td></tr>
+      <tr><td class="lc">Uri De Leon H.</td><td><span class="tag tok">✓</span></td><td><span class="tag tok">✓</span></td><td><span class="tag tok">✓ 6F</span></td><td><span class="tag tok">✓</span></td><td><span class="tag tok">✓</span></td></tr>
+      <tr><td class="lc">Dilan De Leon L.</td><td><span class="tag tok">✓</span></td><td><span class="tag tok">✓</span></td><td><span class="tag tok">✓ 7A</span></td><td><span class="tag tok">✓</span></td><td><span class="tag tok">✓</span></td></tr>
+      <tr class="trt"><td colspan="5"><strong>Total confirmados</strong></td><td class="amt"><strong>7/7 ✅</strong></td></tr>
+    </tbody>
+  </table></div>
+  <div class="alert ag">
+    <h4>✅ Hoteles verificados para 7 personas</h4>
+    <ul>
+      <li>Madrid — Gran Via 63: 1 Familiar + 1 Triple = 7 pax ✅</li>
+      <li>Barcelona — Leonardo Boutique: 2 hab = 7 pax ✅</li>
+      <li>París — Home Latin: 2 hab = 7 pax ✅</li>
+      <li>Atenas — Omiros Hotel: 2 hab = 7 pax ✅</li>
+      <li>Roma — ⚠️ PENDIENTE · 2 hab · 7 pax · ~$650 · 5-7 Nov</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<!-- ================================================================
+     RESERVAS
+================================================================ -->
+<section id="codes" class="sec">
+<div class="sh"><p class="e">✦ Todos los códigos en un lugar</p><h2>Reservas & <em>Logística</em></h2></div>
+<div class="wrap">
+  <p class="st">🔑 Códigos de Reserva</p>
+  <div class="tw"><table>
+    <thead><tr><th>Tipo</th><th>Operador</th><th>Código</th><th>PIN</th><th>Fechas</th></tr></thead>
+    <tbody>
+      <tr><td>✈️</td><td class="lc">Avianca (todos)</td><td><strong>BUKRK3</strong></td><td>—</td><td>28 Oct / 8-9 Nov</td></tr>
+      <tr><td>🚄</td><td class="lc">OUIGO España</td><td><strong>MKMP72</strong></td><td>—</td><td>30 Oct · Coche 16</td></tr>
+      <tr><td>✈️</td><td class="lc">Transavia BCN→PAR</td><td><strong>R8L16Y</strong></td><td>—</td><td>31 Oct · TO4757</td></tr>
+      <tr><td>✈️</td><td class="lc">Transavia PAR→ATH</td><td><strong>GFLNPD</strong></td><td>—</td><td>3 Nov · TO3520</td></tr>
+      <tr><td>✈️</td><td class="lc">ITA Airways ATH→ROM</td><td><strong>X6SCXX</strong></td><td>—</td><td>5 Nov</td></tr>
+      <tr><td>✈️</td><td class="lc">ITA Airways ROM→MAD</td><td><strong>X5K8AQ</strong></td><td>—</td><td>7 Nov</td></tr>
+      <tr><td>🏨</td><td class="lc">Madrid — Gran Via 63</td><td><strong>6034420256</strong></td><td><strong>5695</strong></td><td>29-30 Oct</td></tr>
+      <tr><td>🏨</td><td class="lc">Barcelona — Leonardo</td><td><strong>5112312061</strong></td><td><strong>9405</strong></td><td>30-31 Oct</td></tr>
+      <tr><td>🏨</td><td class="lc">París — Home Latin</td><td><strong>5451500041</strong></td><td><strong>7530</strong></td><td>31Oct-3Nov</td></tr>
+      <tr><td>🏨</td><td class="lc">Atenas — Omiros</td><td><strong>5112331414</strong></td><td><strong>7486</strong></td><td>3-5 Nov</td></tr>
+      <tr><td>🏨</td><td class="lc">Roma</td><td>⏳ Pendiente</td><td>—</td><td>5-7 Nov</td></tr>
+    </tbody>
+  </table></div>
+
+  <p class="st">📋 Pendientes Urgentes</p>
+  <div class="tw"><table>
+    <thead><tr><th>Prioridad</th><th>Tarea</th><th>Detalle</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tag tpend">🔴 URGENTE</span></td><td class="lc">Hotel Roma</td><td>5-7 Nov · 2 hab · 7 pax · ~$650</td></tr>
+      <tr><td><span class="tag twarn">🟡 Importante</span></td><td class="lc">Sagrada Família</td><td>sagradafamilia.org · 31 Oct AM</td></tr>
+      <tr><td><span class="tag twarn">🟡 Importante</span></td><td class="lc">Disneyland París</td><td>disneylandparis.com · 1 Nov</td></tr>
+      <tr><td><span class="tag twarn">🟡 Importante</span></td><td class="lc">Louvre París</td><td>louvre.fr · 2 Nov</td></tr>
+      <tr><td><span class="tag twarn">🟡 Importante</span></td><td class="lc">Coliseo Roma</td><td>coopculture.it · 6 Nov</td></tr>
+      <tr><td><span class="tag twarn">🟡 Importante</span></td><td class="lc">Vaticano</td><td>museivaticani.va · 6 Nov</td></tr>
+      <tr><td><span class="tag tblue">🔵 Recordar</span></td><td class="lc">Llegada GUA madrugada</td><td>01:40 AM del 9 Nov · Coordinar transporte</td></tr>
+    </tbody>
+  </table></div>
+</div>
+</section>
+
+<footer>
+  <p>✦ Viaje Familiar <span>De León</span> · Europa 2026 · 7 Pasajeros · 5 Países · 12 Días ✦</p>
+  <p style="margin-top:.4rem">rudysotopaz@gmail.com</p>
+</footer>
+
+<script>
+// Tab navigation
+function go(id, btn) {
+  document.querySelectorAll('.sec').forEach(s => s.classList.remove('on'));
+  document.querySelectorAll('.tab').forEach(b => b.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  btn.classList.add('on');
+  window.scrollTo({ top: document.querySelector('.nav').offsetTop - 5, behavior: 'smooth' });
+}
+
+// Scroll to today's day on load
+function highlightToday() {
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const dd = String(today.getDate()).padStart(2, '0');
+  const todayStr = yyyy + mm + dd;
+
+  const tripStart = new Date('2026-10-28');
+  const tripEnd   = new Date('2026-11-08');
+
+  const dayCard = document.getElementById('day-' + todayStr);
+
+  if (dayCard) {
+    dayCard.classList.add('today');
+    const badge = dayCard.querySelector('.day-pill');
+    if (badge) {
+      const orig = badge.textContent;
+      badge.textContent = '📍 HOY · ' + orig;
+      badge.style.background = 'var(--gold)';
+      badge.style.color = 'var(--navy)';
+    }
+    setTimeout(() => {
+      dayCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 300);
+  }
+
+  // Map tab note
+  const note = document.getElementById('map-today-note');
+  if (note) {
+    if (today >= tripStart && today <= tripEnd) {
+      const dayCards = document.querySelectorAll('[data-date]');
+      let todayCity = '';
+      dayCards.forEach(c => {
+        if (c.dataset.date === today.toISOString().split('T')[0]) {
+          todayCity = c.querySelector('h3') ? c.querySelector('h3').textContent : '';
+        }
+      });
+      note.textContent = '📍 Estás en: ' + (todayCity || 'día de viaje') + ' — Los lugares de hoy aparecen primero en el itinerario.';
+    } else if (today < tripStart) {
+      const diff = Math.ceil((tripStart - today) / (1000*60*60*24));
+      note.textContent = '✈️ Faltan ' + diff + ' días para el viaje (28 de octubre de 2026)';
+      note.style.background = 'rgba(37,99,235,.08)';
+      note.style.borderColor = 'rgba(37,99,235,.25)';
+      note.style.color = '#1e40af';
+    } else {
+      note.textContent = '🏠 El viaje ya terminó — ¡qué aventura tan increíble!';
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', highlightToday);
+</script>
+</body>
+</html>
